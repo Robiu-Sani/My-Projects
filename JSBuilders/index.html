@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Builders</title>
+        <link rel="icon" href="images/11.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500&family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/911178bb44.js" crossorigin="anonymous"></script>
+        <!-- --------------------------- css work is here --------------------------- -->
+        <style>
+            *{
+                /* font-family: 'Dancing Script', cursive; */
+                font-family: 'Teko', sans-serif;
+                font-size: 20px;
+            }
+            .bgm{
+              background-repeat: no-repeat;
+              background-position: center;
+              background-size: cover;
+            }
+            .bgo{
+                background: rgba(7, 0, 0, 0.541);
+            }
+            .textShadow{
+                text-shadow: 0px 0px 3px black;
+            }
+            .textSpace{
+                letter-spacing: 2px;
+            }
+        </style>
+        <!-- --------------------------- tailowind css cdn link --------------------------- -->
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+    
+        <!-- --------------------------- talowind custom color maker --------------------------- -->
+        <script>
+            tailwind.config = {
+              theme: {
+                extend: {
+                  colors: {
+                    clifford: '#da373d',
+                    Primary: '#ea580c',
+                    blackOpacity : '#000000d6',
+                  },
+                }
+              }
+            }
+          </script>
+    
+    </head>
+<body>
+
+    <header class="w-full">
+
+        <!-- --------------------------- nav bar start from here --------------------------- -->
+
+        <nav class="container mx-auto px-4">
+            <div class="navbar w-full">
+                <div class="navbar-start">
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </div>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                        <li><a class="text-Primary"> Home </a></li>
+                        <li><a> About </a></li>
+                        <li><a> Blog </a></li>
+                        <li><a> Contact </a></li>
+                        <li>
+                          <details>
+                            <summary>Account</summary>
+                            <ul class="p-2">
+                              <li><a>User</a></li>
+                              <li><a>Admin</a></li>
+                            </ul>
+                          </details>
+                        </li>
+                    </ul>
+                  </div>
+                  <a class="btn btn-ghost text-xl md:text-2xl"><span class="text-Primary text-xl md:text-2xl">JS </span> Builders</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu menu-horizontal px-1">
+                    <li><a class="text-Primary"> Home </a></li>
+                    <li><a> About </a></li>
+                    <li><a> Blog </a></li>
+                    <li><a> Contact </a></li>
+                    <li>
+                      <details class="relative">
+                        <summary>Account</summary>
+                        <ul class="p-2 absolute z-10 rounded-md">
+                          <li><a>User</a></li>
+                          <li><a>Admin</a></li>
+                        </ul>
+                      </details>
+                    </li>
+                  </ul>
+                </div>
+                <div class="navbar-end">
+                  <a class="bg-Primary py-2 px-8 rounded-md text-white cursor-pointer">Hot Line</a>
+                </div>
+              </div>
+        </nav>
+
+        <!-- --------------------------- banner start from here --------------------------- -->
+        <div class="container mx-auto h-auto lg:h-[550px] px-4">
+            <div class="carousel rounded-xl h-full w-full">
+                <div id="slide1" class="carousel-item relative w-full">
+
+                    <div class="hero px-1 md:px-10 py-5 md:py-20 bgo">
+                        <div class="hero-content justify-between flex-col gap-5 md:flex-row-reverse">
+                          <img src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" class="max-w-sm rounded-lg shadow-2xl" />
+                          <div class="w-full md:w-1/2 "> 
+                            <h1 class="text-3xl md:text-5xl text-white font-bold text-center md:text-left">Precision Builds for Your Dream Home</h1>
+                            <p class="py-6 text-white text-center md:text-left">Discover the epitome of craftsmanship with our precision builds for your dream home. From foundation to finishing touches, we ensure meticulous attention to detail, turning your vision into reality.</p>
+                            <div class="w-full flex justify-center md:justify-start">
+                            <button class="btn bg-Primary text-white text-xl hover:text-black border-Primary"> Click here &nbsp; <i class="fa-solid fa-person-walking-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        </div>
+                      </div>
+
+                  <img src="images/1.jpg" class="w-full h-full absolute -z-10" />
+                  <div class="absolute flex justify-start gap-3 transform -translate-y-1/2 left-5 bottom-0">
+                    <a href="#slide4" class="btn text-xl text-white bg-blackOpacity hover:text-black">❮</a> 
+                    <a href="#slide2" class="btn text-xl text-white bg-blackOpacity hover:text-black">❯</a>
+                  </div>
+                </div> 
+                <div id="slide2" class="carousel-item relative w-full">
+                    
+                    <div class="hero px-1 md:px-10 py-5 md:py-20 bgo">
+                        <div class="hero-content justify-between flex-col gap-5 md:flex-row-reverse">
+                          <img src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" class="max-w-sm rounded-lg shadow-2xl" />
+                          <div class="w-full md:w-1/2 "> 
+                            <h1 class="text-3xl md:text-5xl text-white font-bold text-center md:text-left">Quality Craftsmanship, Trusted Builders</h1>
+                            <p class="py-6 text-white text-center md:text-left">Experience excellence with our trusted builders. We pride ourselves on quality craftsmanship, ensuring your project reflects unparalleled skill, reliability, and a commitment to exceeding expectations.</p>
+                            <div class="w-full flex justify-center md:justify-start">
+                            <button class="btn bg-Primary text-white text-xl hover:text-black border-Primary"> Click here &nbsp; <i class="fa-solid fa-person-walking-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        </div>
+                      </div>
+
+                  <img src="images/2.jpg" class="w-full h-full absolute -z-10" />
+                  <div class="absolute flex justify-start gap-3 transform -translate-y-1/2 left-5 bottom-0">
+                    <a href="#slide1" class="btn text-xl text-white bg-blackOpacity hover:text-black">❮</a> 
+                    <a href="#slide3" class="btn text-xl text-white bg-blackOpacity hover:text-black">❯</a>
+                  </div>
+                </div> 
+                <div id="slide3" class="carousel-item relative w-full">
+                    
+                    <div class="hero px-1 md:px-10 py-5 md:py-20 bgo">
+                        <div class="hero-content justify-between flex-col gap-5 md:flex-row-reverse">
+                          <img src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" class="max-w-sm rounded-lg shadow-2xl" />
+                          <div class="w-full md:w-1/2 "> 
+                            <h1 class="text-3xl md:text-5xl text-white font-bold text-center md:text-left">Swift and Reliable Building Solutions</h1>
+                            <p class="py-6 text-white text-center md:text-left">Embrace swift and reliable building solutions with us. From concept to completion, our team ensures efficiency and dependability, turning your vision into reality with speed and unwavering reliability.</p>
+                            <div class="w-full flex justify-center md:justify-start">
+                            <button class="btn bg-Primary text-white text-xl hover:text-black border-Primary"> Click here &nbsp; <i class="fa-solid fa-person-walking-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        </div>
+                      </div>
+
+                  <img src="images/3.jpg" class="w-full h-full absolute -z-10" />
+                  <div class="absolute flex justify-start gap-3 transform -translate-y-1/2 left-5 bottom-0">
+                    <a href="#slide2" class="btn text-xl text-white bg-blackOpacity hover:text-black">❮</a> 
+                    <a href="#slide4" class="btn text-xl text-white bg-blackOpacity hover:text-black">❯</a>
+                  </div>
+                </div> 
+                <div id="slide4" class="carousel-item relative w-full">
+                    
+                    <div class="hero px-1 md:px-10 py-5 md:py-20 bgo">
+                        <div class="hero-content justify-between flex-col gap-5 md:flex-row-reverse">
+                          <img src="https://daisyui.com/images/stock/photo-1635805737707-575885ab0820.jpg" class="max-w-sm rounded-lg shadow-2xl" />
+                          <div class="w-full md:w-1/2 "> 
+                            <h1 class="text-3xl md:text-5xl text-white font-bold text-center md:text-left">Excellence in Every Detail, Your Ideal Builder</h1>
+                            <p class="py-6 text-white text-center md:text-left">Your ideal builder, committed to excellence in every detail. From concept to completion, we meticulously craft your vision, ensuring unparalleled quality and attention to detail at every step.</p>
+                            <div class="w-full flex justify-center md:justify-start">
+                            <button class="btn bg-Primary text-white text-xl hover:text-black border-Primary"> Click here &nbsp; <i class="fa-solid fa-person-walking-arrow-right"></i></button>
+                            </div>
+                        </div>
+                        </div>
+                      </div>
+
+                  <img src="images/4.jpg" class="w-full h-full absolute -z-10" />
+                  <div class="absolute flex justify-start gap-3 transform -translate-y-1/2 left-5 bottom-0">
+                    <a href="#slide3" class="btn text-xl text-white bg-blackOpacity hover:text-black">❮</a> 
+                    <a href="#slide1" class="btn text-xl text-white bg-blackOpacity hover:text-black">❯</a>
+                  </div>
+                </div>
+              </div>
+        </div>
+        
+
+    </header>
+
+    <main class="container mx-auto px-4">
+
+      <!-- --------------------------- first container start from here --------------------------- -->
+      <section class="w-full py-20">
+        <h1 class="text-3xl text-center font-bold">Construction <span class="text-Primary text-3xl">Corner</span></h1>
+        <p class="text-center w-full lg:w-2/3 mx-auto my-5">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+
+        <!-- card container is here -- -->
+        <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 pt-8">
+
+          <div class="card w-full flex justify-center items-center flex-col">
+            <div class=" bg-Primary rounded-full">
+            <img src="images/8.png" alt="image" class="w-16 m-6">
+            </div>
+            <h3 class="card-title text-2xl my-5">Constraction</h3>
+            <p class="text-center">Building the future, one brick at a time. Our passion is constructing spaces that stand the test of time. Introducing a Modern Oasis: The Tranquil Haven Residence</p>
+          </div>
+
+          <div class="card w-full flex justify-center items-center flex-col">
+            <div class=" bg-Primary rounded-full">
+            <img src="images/9.png" alt="image" class="w-16 m-6">
+            </div>
+            <h3 class="card-title text-2xl my-5">Unique Design</h3>
+            <p class="text-center">Elevate your space with unparalleled charm. Our unique designs redefine aesthetics, blending innovation and elegance seamlessly for a distinctive allure.</p>
+          </div>
+
+          <div class="card w-full flex justify-center items-center flex-col">
+            <div class=" bg-Primary rounded-full">
+            <img src="images/10.png" alt="image" class="w-16 m-6">
+            </div>
+            <h3 class="card-title text-2xl my-5">Extrime Idea</h3>
+            <p class="text-center">Pushing boundaries with extreme ideas. Transforming visions into extraordinary structures. Your imagination, our blueprint—building the extraordinary together.</p>
+          </div>
+
+          <div class="card w-full flex justify-center items-center flex-col">
+            <div class=" bg-Primary rounded-full">
+            <img src="images/11.png" alt="image" class="w-16 m-6">
+            </div>
+            <h3 class="card-title text-2xl my-5">Awesome Look</h3>
+            <p class="text-center">Building the future, one brick at a time. Our passion is constructing spaces that stand the test of time. Introducing a Modern Oasis: The Tranquil Haven Residence</p>
+          </div>
+
+        </div>
+
+         <!-- secend type card container is here  -->
+         <div class="w-full pt-10 grid grid-cols-1 lg:grid-cols-3">
+
+          <div class="w-full flex flex-col sm:flex-row gap-3 py-10 px-5 bg-slate-300">
+            <img src="images/5.png" alt="images" class="w-20">
+            <div class="">
+              <h3 class="card-title text-xl">Expert & Professional</h3>
+              <p>Expert & Professional: Pinnacle skills, unwavering precision—your trusted guide to excellence in every domain.</p>
+            </div>
+          </div>
+
+          <div class="w-full flex flex-col sm:flex-row gap-3 py-10 px-5 bg-Primary">
+            <img src="images/6.png" alt="images" class="w-20">
+            <div class="">
+              <h3 class="card-title text-xl text-white">High Quality Work</h3>
+              <p class="text-white">Expert & Professional: Pinnacle skills, unwavering precision—your trusted guide to excellence in every domain.</p>
+            </div>
+          </div>
+
+          <div class="w-full flex flex-col sm:flex-row gap-3 py-10 px-5 bg-cyan-700">
+            <img src="images/7.png" alt="images" class="w-20">
+            <div class="">
+              <h3 class="card-title text-xl text-white">24/7 Help Support</h3>
+              <p class="text-white">Expert & Professional: Pinnacle skills, unwavering precision—your trusted guide to excellence in every domain.</p>
+            </div>
+          </div>
+
+         </div>
+      </section>
+
+      <!-- --------------------------- secend section start from here --------------------------- -->
+
+      <section class="w-full py-20" >
+        <h1 class="text-3xl text-center font-bold">We create and turn <span class="text-Primary text-3xl">into reality</span></h1>
+        <p class="text-center w-full lg:w-2/3 mx-auto my-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+
+        <div class="hero">
+          <div class="hero-content flex-col md:flex-row">
+            <img src="images/12.jpg" class="w-full md:w-1/2" />
+            <div>
+              <h1 class="text-2xl font-bold">Box Office News!</h1>
+              <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+              <ul>
+                <li class="list-disc ml-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, nemo? Ut quidem ea dolore nostrum.</li>
+                <li class="list-disc ml-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, nemo? Ut quidem ea dolore nostrum.</li>
+                <li class="list-disc ml-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, nemo? Ut quidem ea dolore nostrum.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- --------------------------- question container --------------------------- -->
+        <div class="hero -mt-8">
+          <div class="hero-content flex-col-reverse md:flex-row">
+            <div class="w-full md:w-1/2 p-4">
+              <h1 class="text-2xl font-bold">Frequent Questions Answer!</h1>
+              <div class="">
+
+                <div class="collapse collapse-plus">
+                  <input type="radio" name="my-accordion-3" checked="checked" /> 
+                  <div class="collapse-title text-xl font-medium">
+                    1. Are application fee waivers available?
+                  </div>
+                  <div class="collapse-content"> 
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, animi quibusdam alias incidunt labore doloribus doloremque aperiam recusandae. Nesciunt unde reprehenderit fugit totam facilis dolorum quis consequatur eaque distinctio provident.</p>
+                  </div>
+                </div>
+                <div class="collapse collapse-plus">
+                  <input type="radio" name="my-accordion-3" checked="checked" /> 
+                  <div class="collapse-title text-xl font-medium">
+                    2. Are application fee waivers available?
+                  </div>
+                  <div class="collapse-content"> 
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, animi quibusdam alias incidunt labore doloribus doloremque aperiam recusandae. Nesciunt unde reprehenderit fugit totam facilis dolorum quis consequatur eaque distinctio provident.</p>
+                  </div>
+                </div>
+                <div class="collapse collapse-plus">
+                  <input type="radio" name="my-accordion-3" checked="checked" /> 
+                  <div class="collapse-title text-xl font-medium">
+                    3. Are application fee waivers available?
+                  </div>
+                  <div class="collapse-content"> 
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, animi quibusdam alias incidunt labore doloribus doloremque aperiam recusandae. Nesciunt unde reprehenderit fugit totam facilis dolorum quis consequatur eaque distinctio provident.</p>
+                  </div>
+                </div>
+  
+              </div>
+            </div>
+            <img src="images/13.jpg" class="w-full md:w-1/2" />
+          </div>
+        </div>
+
+        <!-- --------------------------- project count container --------------------------- -->
+        <div class="w-full -mt-5 px-4 flex flex-col lg:flex-row" >
+          <div class="w-full lg:w-1/2 bg-Primary p-10 flex flex-col sm:flex-row justify-around">
+            <div class="flex justify-center items-center">
+              <h1 class="text-6xl font-extrabold text-white mr-4">10</h1>
+              <h3 class="text-2xl font-bold leading-5 text-white">YEARS OF <br>EXPERIENCED</h3>
+            </div>
+            <div class="flex justify-center items-center">
+              <h1 class="text-6xl font-extrabold text-white mr-4">50</h1>
+              <h3 class="text-2xl font-bold leading-5 text-white">PROJECTS <br>DONE</h3>
+            </div>
+          </div>
+          <div class="w-full lg:w-1/2 bg-white p-10 flex flex-col sm:flex-row justify-around">
+            <div class="flex justify-center items-center">
+              <h1 class="text-6xl font-extrabold text-Primary mr-4">15</h1>
+              <h3 class="text-2xl font-bold leading-5 text-Primary">PROFESSIONAL <br>EXPERT </h3>
+            </div>
+            <div class="flex justify-center items-center">
+              <h1 class="text-6xl font-extrabold text-Primary mr-4">500</h1>
+              <h3 class="text-2xl font-bold leading-5 text-Primary">HAPPY <br>CLIENTS</h3>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- --------------------------- thisd section is start from here --------------------------- -->
+      <section class="w-full py-20">
+        <h1 class="text-3xl text-center font-bold">OUR <span class="text-Primary text-3xl">GALLERY</span></h1>
+        <p class="text-center w-full lg:w-2/3 mx-auto my-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+
+        <!-- --------- IMAGE container is start from here --------  -->
+        <div class="w-full pt-10 grid gap-1 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+
+          <div class="w-full h-[350px] flex justify-center items-center col-span-1 md:col-span-2 bgm" style="background-image: url(images/14.jpg);" >
+            <h1 class="text-5xl text-current p-10 font-extrabold">IMAGE</h1>
+          </div>
+
+          <div class="w-full h-[350px] lg:h-[700px] flex justify-center items-center col-span-1 md:col-span-2 lg:col-span-1 row-span-1 lg:row-span-2 bgm" style="background-image: url(images/15.jpg);" >
+            <h1 class="text-5xl text-current p-10 font-extrabold">IMAGE</h1>
+          </div>
+
+          <div class="w-full h-[350px] flex justify-center items-center col-span-1 md:col-span-2 bgm" style="background-image: url(images/16.jpg);" >
+            <h1 class="text-5xl text-current p-10 font-extrabold">IMAGE</h1>
+          </div>
+
+          <div class="w-full h-[350px] flex justify-center items-center col-span-1 md:col-span-2 lg:col-span-1 bgm" style="background-image: url(images/17.jpg);" >
+            <h1 class="text-5xl text-current p-10 font-extrabold">IMAGE</h1>
+          </div>
+
+          <div class="w-full h-[350px] flex justify-center items-center col-span-1 md:col-span-2 bgm" style="background-image: url(images/18.jpg);" >
+            <h1 class="text-5xl text-current p-10 font-extrabold">IMAGE</h1>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- --------------------------- fourth section start from here --------------------------- -->
+      <section class="w-full py-20">
+        <h1 class="text-3xl text-center font-bold">OUR <span class="text-Primary text-3xl">TEAM</span></h1>
+        <p class="text-center w-full lg:w-2/3 mx-auto my-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+
+        <!-- -------- context container --------  -->
+        <div class="w-full p-10 flex justify-center items-center">
+          <div class="avatar-group -space-x-6 rtl:space-x-reverse">
+            <div class="avatar">
+              <div class="w-12 md:w-20 lg:w-[200px]">
+                <img src="images/19.jpg" />
+              </div>
+            </div>
+            <div class="avatar">
+              <div class="w-12 md:w-20 lg:w-[200px] ">
+                <img src="images/20.jpg" />
+              </div>
+            </div>
+            <div class="avatar">
+              <div class="w-12 md:w-20 lg:w-[200px]">
+                <img src="images/21.jpg" />
+              </div>
+            </div>
+            <div class="avatar">
+              <div class="w-12 md:w-20 lg:w-[200px]">
+                <img src="images/22.jpg" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+
+    <!-- --------------------------- footer start from here --------------------------- -->
+    <footer class="pt-5 px-5 lg:pt-10 lg:px-10 bg-neutral">
+      <div class="container mx-auto flex justify-center items-center md:justify-around flex-col md:flex-row p-5 mb-4" style="border-bottom:1px solid white">
+        <a class="text-white text-xl md:text-2xl"><span class="text-Primary text-xl md:text-2xl">JS </span> Builders</a>
+        <div class="flex gap-3">
+          <i class="fa-brands text-white text-2xl fa-facebook"></i>
+          <i class="fa-brands text-white text-2xl fa-instagram"></i>
+          <i class="fa-brands text-white text-2xl fa-square-x-twitter"></i>
+          <i class="fa-brands text-white text-2xl fa-youtube"></i>
+        </div>
+      </div>
+      <div class="container mx-auto grid grid-cols-1 lg:grid-cols-4 md:grid-cols-2 text-neutral-content pb-8">
+        <aside class="w-full mb-8">
+          <div class="w-20 h-20 rounded-full bg-Primary p-4 mb-6">
+            <img src="images/10.png" alt="icon" class="mb-8">
+          </div>
+          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam provident cupiditate eum maiores, corporis deserunt quam, adipisci ipsam rerum velit sed est quia? Maiores voluptatum, quidem ex necessitatibus saepe facere?</p>
+        </aside> 
+        <nav class="w-full mb-8 " >
+          <h3 class="footer-title mb-8 text-white">Useful Link</h3> 
+          <ul>
+            <li><a class="link link-hover">Home</a></li>
+            <li><a class="link link-hover">About Us</a></li>
+            <li><a class="link link-hover">Cases</a></li>
+            <li><a class="link link-hover">Blog</a></li>
+            <li><a class="link link-hover">Contact Us</a></li>
+          </ul>
+        </nav> 
+        <nav class="w-full mb-8" >
+          <h3 class="footer-title mb-8 text-white">Contact Now</h3> 
+          <ul>
+            <li class="mb-4"><a class="link link-hover">A108 Adam Street,<br> New York, NY 535022</a></li>
+            <li class="mb-4"><a class="link link-hover">+88 01750 00 00 00</a> <br> <a class="link link-hover">+88 01750 00 00 00</a></li>
+            <li class="mb-4"><a class="link link-hover">info@gmail.com</a> <br><a class="link link-hover">info@gmail.com</a></li>
+          </ul>
+        </nav> 
+        <nav class="w-full mb-8" >
+          <h3 class="footer-title mb-8 text-white">Legal</h3> 
+          <p class="mb-8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet.</p>
+          <form action="" class="w-full bg-white rounded-lg relative">
+            <input type="email" placeholder="Enter Your Email" class="w-full input text-black">
+            <button type="submit" class="btn absolute right-0 bg-Primary text-xl text-white"><i class="fa-regular fa-paper-plane"></i></button>
+          </form>
+        </nav>
+      </div><hr>
+      <div class="container mx-auto p-4 flex justify-end">
+        <h3 class="text-xl text-white">Made By <a href="https://github.com/Robiu-Sani" class="text-Primary text-xl link">Robius Sani</a></h3>
+      </div>
+    </footer>
+    
+</body>
+</html>
