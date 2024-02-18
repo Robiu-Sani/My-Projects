@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>E-Ticket</title>
+        <link rel="icon" href="images/bus-icon.png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/911178bb44.js" crossorigin="anonymous"></script>
+        <!-- --------------------------- css work is here --------------------------- -->
+        <style>
+            *{
+                /* font-family:  sans-serif; */
+                font-family: "Raleway", sans-serif;
+                transition: all .5s;
+            }
+            .active{
+                display: block !important;
+            }
+            .bgActive{
+                background: #16a34a !important;
+            }
+            .border1{
+                border: 1px solid #16a34a;
+            }
+            .bg-img{
+                background: linear-gradient(rgba(255, 0, 0, 0),rgba(255, 0, 0, 0)),url(images/banner.png);
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+            .bdrB{
+                border-bottom: 3px solid #16a34a;
+            }
+            .borderLt{
+                border-right: 1px dashed #16a34a;
+            }
+            .successa{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,20%);
+            }
+            @media (max-width:767px) {
+                .borderLt{
+                    border-bottom: 1px dashed #16a34a;
+                    border-right: 0;
+                }
+            }
+        </style>
+        <!-- --------------------------- tailowind css cdn link --------------------------- -->
+        <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
+        <script src="https://cdn.tailwindcss.com"></script>
+    
+        <!-- --------------------------- talowind custom color maker --------------------------- -->
+        <script>
+            tailwind.config = {
+              theme: {
+                extend: {
+                  colors: {
+                    clifford: '#da373d',
+                  },
+                }
+              }
+            }
+          </script>
+    
+    </head>
+<body>
+    <header class="w-full mb-4">
+        <nav class="container mx-auto">
+        <div class="navbar">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </div>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                    <li><a> Home </a></li>
+                <li><a> About </a></li>
+                <li><a> Destination </a></li>
+                <li><a> Search </a></li>
+                </ul>
+              </div>
+              <a class="font-bold btn-ghost text-xl md:text-3xl"><span class="text-[#16a34a] text-xl md:text-3xl">E-</span>Ticket</a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+              <ul class="menu menu-horizontal px-1">
+                <li><a> Home </a></li>
+                <li><a> About </a></li>
+                <li><a> Destination </a></li>
+                <li><a> Search </a></li>
+              </ul>
+            </div>
+            <div class="navbar-end">
+              <a class="bg-green-100 font-bold gap-3 p-2 px-4 hover:bg-green-200 flex rounded-md border1 text-[#16a34a] cursor-pointer">Bus <img src="images/bus-icon.png" alt="bus"></a>
+            </div>
+          </div>
+    </nav>
+
+    <!-- ---------------------------end nev bar ---------------------------- -->
+
+    <div class="container mx-auto rounded-xl min-h-[550px] bg-img p-4 pt-16 flex flex-col justify-center items-center">
+        <h1 class="text-3xl md:text-6xl text-center text-white font-bold">End-to-End Travel with</h1>
+        <h1 class="text-3xl md:text-6xl text-center text-[#16a34a] font-bold my-8">Enjoy Paribahan</h1>
+        <p class="text-center mx-auto p-2 md:w-[650px] text-white">Experience Seamless Travel: Where Every Mile Brings Comfort, Safety, and Adventure Awaits!</p>
+        <a href="#byTiket" class="btn bg-[#16a34a] border-0 m-7 w-40 font-bold text-white hover:text-black">Buy Tickets</a>
+    </div>
+
+    <!-- --------------------------- banner end ----------------------------  -->
+
+    <div class="max-w-full mx-auto flex justify-center items-center flex-col md:flex-row gap-3 md:gap-6 m-4 md:-mt-14">
+        <div class="p-6 rounded-2xl shadow-sm flex justify-center items-center gap-5 bg-white bdrB">
+            <img src="images/people.png" alt="">
+            <div class="">
+                <h1 class="text-3xl text-black">500K+</h1>
+                <span class="text-natural-500">Registered users</span>
+            </div>
+        </div>
+        <div class="p-6 rounded-2xl shadow-sm justify-center items-center flex gap-5 bg-white bdrB">
+            <img src="images/ticket-cupon.png" alt="">
+            <div class="">
+                <h1 class="text-3xl text-black">1.7 lacks</h1>
+                <span class="text-natural-500">Tickets sold</span>
+            </div>
+        </div>
+        <div class="p-6 rounded-2xl shadow-sm justify-center items-center flex gap-5 bg-white bdrB">
+            <img src="images/stoppage.png" alt="">
+            <div class="">
+                <h1 class="text-3xl text-black">80K+</h1>
+                <span class="text-natural-500">Rental partners</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="Complite" class="w-full z-index-10 hidden min-h-full flex justify-center items-center bg-gray-100 fixed top-0 left-0">
+        <div class=" successa card max-w-[550px] p-5 md:p-20 shadow-lg bg-white flex flex-col justify-center items-center gap-5">
+            <img src="images/success.png" alt="">
+            <p class="text-balck text-center font-bold">Thank you for Booking Our Bus Seats. <br/> We are working hard to find the best service and deals for you.</p>
+            <span class="text-gray-600 -mt-5">Shortly you will find a confirmation in your email.</span>
+            <button id="close" class="px-20 font-bold text-white cursor-pointer py-2 bg-[#16a34a] rounded-full">Continue</button>
+        </div>
+    </div>
+
+    </header>
+
+    <main>
+        <section class="container mx-auto flex flex-col items-center px-4 py-10">
+            <h1 class="text-center text-3xl text-black mb-5">Best offers for you </h1>
+            <div class="w-full flex justify-between items-center flex-col md:flex-row gap-8 pt-5">
+                <div id="card1" class="rounded-2xl w-full flex bg-yellow-500 cursor-pointer h-48">
+                    <div class="min-w-[55%] p-9 flex flex-col justify-center gap-1">
+                        <h1 class="text-2xl md:text-3xl font-extrabold">15% OFF</h1>
+                        <p class="text-black font-bold">on your next purchase</p>
+                        <span class=" text-natural-500">use by January 2024</span>
+                    </div>
+                    <img src="images/cupon-devider.png" alt="" class="h-full">
+                    <div class="py-9 flex flex-col justify-center gap-1">
+                        <h1 class="text-2xl md:text-3xl font-extrabold">NEW15</h1>
+                        <span class=" text-natural-500">Coupon Code</span>
+                    </div>
+                </div>
+                <div id="card2" class="rounded-2xl w-full flex bg-pink-400 cursor-pointer h-48">
+                    <div class="min-w-[55%] p-9 flex flex-col justify-center gap-1">
+                        <h1 class="text-2xl md:text-3xl font-extrabold">20% OFF</h1>
+                        <p class="text-black font-bold">on your next purchase</p>
+                        <span class=" text-natural-500">use by January 2024</span>
+                    </div>
+                    <img src="images/cupon-devider.png" alt="" class="h-full">
+                    <div class="py-9 flex flex-col justify-center gap-1">
+                        <h1 class=" text-2xl md:text-3xl font-extrabold">Couple 20</h1>
+                        <span class=" text-natural-500">Coupon Code</span>
+                    </div>
+                </div>
+            </div>
+            <button class="border1 mt-10 rounded p-2 hover:bg-green-200 px-5 m-4 font-bold text-[#16a34a]">See All Offers</button>
+        </section>
+        <section id="byTiket" class="w-full my-8 p-10 rounded-3xl bg-gray-100" style="border-top: 3px solid #16a34a;">
+            <h1 class="text-3xl text-center m-5 font-bold">Enjoy Paribahan</h1>
+            <p class="w-full px-2 md:w-[650px] mx-auto text-center">Explore the Road Ahead: Where Every Ride Promises Comfort, Safety, and Unforgettable Adventures.</p>
+            <div class="container mx-auto mt-5 gap-0 flex justify-center items-center flex-col rounded-2xl bg-white md:flex-row w-full ">
+                <div class="w-full rounded-xl bg-gray-100 md:w-2/3 p-4">
+                    <div class="flex flex-col md:flex-row justify-center md:justify-between items-center py-5">
+                        <div class="flex flex-col md:flex-row justify-center items-center gap-5">
+                            <img src="images/bus-logo.png" alt="" class="h-14">
+                            <div class=" flex flex-col justify-center gap-1">
+                                <h1 class=" text-2xl text-center md:text-left md:text-3xl font-bold">Greenline Paribahan</h1>
+                                <span class=" text-natural-500">Coach-009-WEB ! AC_Business</span>
+                            </div>
+                        </div>
+                        <button class="btn bg-green-100 flex m-5 text-[#16a34a]"><img src="images/seat-green-filled.png" alt=""><span id="setLeft"></span>Seat left</button>
+                    </div>
+                    <div class="flex justify-between items-center p-4" style="border-bottom: 1px dashed #4b4b4b63;">
+                        <p class=" text-natural-500">Route</p>
+                        <p class="text-black font-bold">Dhaka - Sylhet</p>
+                    </div>
+                    <div class="flex justify-between items-center p-4" style="border-bottom: 1px dashed #4b4b4b63;">
+                        <p class=" text-natural-500">Departure Time</p>
+                        <p class="text-black font-bold">9:00 pm</p>
+                    </div>
+                    <div class="flex flex-col md:flex-row justify-center md:justify-between gap-3 items-center p-4">
+                        <button class="btn bg-green-100">Boarding Point - Laxmipur</button>
+                        <button class="btn bg-green-100">Dropping Point - Bogura</button>
+                        <button class="btn bg-green-100">Est. Time - 11 Hour</button>
+                    </div>
+                </div>
+                <img src="images/info-devider.png" alt="" class="m-0 rotate-0 z-index-1 hidden md:block">
+                <div class="flex flex-col justify-center items-center w-full md:w-1/4">
+                    <img src="images/fare.png" alt="">
+                    <h1 class="text-2xl font-bold text-black">550 Taka</h1>
+                    <h1 class="text-xl font-bold text-slate-400">Per Seat</h1>
+                </div>
+            </div>
+            
+            <div class="container mx-auto my-5 p-4 flex justify-center items-center flex-col rounded-2xl bg-white md:flex-row w-full">
+                <div class="w-full md:w-3/5 borderLt">
+                    <div class="w-full p-3">
+                        <div class=" p-4" style="border-bottom: 1px dashed #4b4b4b63;">
+                            <h1 class=" text-2xl">Select Your Seat</h1>
+                        </div>
+                        <div class="flex flex md:flex-row justify-center gap-2 sm:justify-between items-center p-4" style="border-bottom: 1px dashed #4b4b4b63;">
+                            <p class="flex gap-3 justify-center items-center btn text-natural-500"><img src="images/seat-gray.png" alt=""> Available</p>
+                            <p class="flex gap-3 justify-center items-center btn text-green-500 font-bold"><img src="images/seat-green-filled.png" alt=""> Selected </p>
+                        </div>
+                        <div id="fullBus" class="w-full p-2 mt-8">
+                            <div class="w-full grid grid-cols-10 gap-2">
+                                <span class="w-full p-2 text-center"></span>
+                                <span class="w-full p-2 text-center col-span-2"></span>
+                                <span class="w-full p-2 text-center col-span-2"></span>
+                                <span class="w-full p-2 text-center"></span>
+                                <span class="w-full p-2 text-center col-span-2"></span>
+                                <span class="w-full p-2 text-center bg-gray-200 rounded-md cursor-pointer col-span-2"><img src="images/st.png" alt="" class="w-6 mx-auto"></span>
+                            </div>
+                            <div class="w-full grid grid-cols-10 gap-2 mt-3">
+                                <span class="w-full p-2 text-center rounded-md">A</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">A1</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">A2</span>
+                                <span class="w-full p-2 text-center rounded-md"></span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">A3</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">A4</span>
+                            </div>
+                            <div class="w-full grid grid-cols-10 gap-2 mt-3">
+                                <span class="w-full p-2 text-center rounded-md">B</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">B1</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">B2</span>
+                                <span class="w-full p-2 text-center rounded-md"></span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">B3</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">B4</span>
+                            </div>
+                            <div class="w-full grid grid-cols-10 gap-2 mt-3">
+                                <span class="w-full p-2 text-center rounded-md">C</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">C1</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">C2</span>
+                                <span class="w-full p-2 text-center rounded-md"></span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">C3</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">C4</span>
+                            </div>
+                            <div class="w-full grid grid-cols-10 gap-2 mt-3">
+                                <span class="w-full p-2 text-center rounded-md">D</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">D1</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">D2</span>
+                                <span class="w-full p-2 text-center rounded-md"></span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">D3</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">D4</span>
+                            </div>
+                            <div class="w-full grid grid-cols-10 gap-2 mt-3">
+                                <span class="w-full p-2 text-center rounded-md">E</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">E1</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">E2</span>
+                                <span class="w-full p-2 text-center rounded-md"></span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">E3</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">E4</span>
+                            </div>
+                            <div class="w-full grid grid-cols-10 gap-2 mt-3">
+                                <span class="w-full p-2 text-center rounded-md">F</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">F1</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">F2</span>
+                                <span class="w-full p-2 text-center rounded-md"></span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">F3</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">F4</span>
+                            </div>
+                            <div class="w-full grid grid-cols-10 gap-2 mt-3">
+                                <span class="w-full p-2 text-center rounded-md">G</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">G1</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">G2</span>
+                                <span class="w-full p-2 text-center rounded-md"></span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">G3</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">G4</span>
+                            </div>
+                            <div class="w-full grid grid-cols-10 gap-2 mt-3">
+                                <span class="w-full p-2 text-center rounded-md">H</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">H1</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">H2</span>
+                                <span class="w-full p-2 text-center rounded-md"></span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">H3</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">H4</span>
+                            </div>
+                            <div class="w-full grid grid-cols-10 gap-2 mt-3">
+                                <span class="w-full p-2 text-center rounded-md">I</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">I1</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">I2</span>
+                                <span class="w-full p-2 text-center rounded-md"></span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">I3</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">I4</span>
+                            </div>
+                            <div class="w-full grid grid-cols-10 gap-2 mt-3">
+                                <span class="w-full p-2 text-center rounded-md">J</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">J1</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">J2</span>
+                                <span class="w-full p-2 text-center rounded-md"></span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">J3</span>
+                                <span class="w-full seat p-2 text-center bg-gray-100 cursor-pointer rounded-md col-span-2">J4</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-2/5 p-2">
+                    <div class=" p-4" style="border-bottom: 1px dashed #4b4b4b63;">
+                        <h1 class=" text-2xl">Select Your Seat</h1>
+                    </div>
+                    <div class="m-3 rounded-xl bg-gray-100 p-2">
+                        <div class="flex justify-between items-center p-4" style="border-bottom: 1px dashed #4b4b4b63;">
+                            <small class=" text-black">Seat <sup id="setnumber" class="bg-[#16a34a] rounded-md text-white px-1"></sup></small>
+                            <small class="text-black">Class</small>
+                            <small class="text-black">Price</small>
+                        </div>
+                        <div id="selectedSeat" class="w-full"></div>
+                        <hr/>
+                        <div class="flex justify-between items-center p-2">
+                            <small class="text-black font-bold">Total Price</small>
+                            <small class="text-black font-bold">BDT <span id="totalPriceadd" class="text-xl"></span></small>
+                        </div>
+                        <div id="copenInput" class="w-full bg-white my-4 hidden rounded-md relative p-1">
+                            <input type="text" id="getCopne" placeholder="Have Any Coupon?" class="input w-full pr-10">
+                            <input type="submit" id="applyCopne" value="Apply" class="input absolute right-1 bg-[#16a34a]">
+                        </div>
+                        <div class="flex justify-between items-center p-2">
+                            <small class="text-black font-bold">Grand Total</small>
+                            <small class="text-black font-bold">BTD <span id="GrandTotal" class="text-xl"></span></small>
+                        </div>
+                    </div>
+                    <form action="" class="my-2 px-2 p-1">
+                        <label for="name">Passenger Name*
+                            <input type="text" placeholder="Enter Your Name" class="input bg-gray-100 w-full my-4">
+                        </label>
+                        <label for="name">Phone Number*
+                            <input type="number" id="NumberBox" placeholder="Enter Phone Number" class="input bg-gray-100 w-full my-4">
+                        </label>
+                        <label for="name">Email Id
+                            <input type="text" placeholder="Enter Email Id" class="input bg-gray-100 w-full my-4">
+                        </label>
+                        <label for="name" id="submit" class="hidden">
+                            <input type="submit" value="Next" class="input w-full my-4 bg-[#16a34a]">
+                        </label>
+                    </form>
+                    <div class="flex justify-between">
+                        <a href="" class="underline">Terms and Conditions</a>
+                        <a href="" class="underline">Cancellation Policy</a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <footer class=" p-10 bg-neutral text-neutral-content">
+        <div class="container mx-auto flex justify-center md:justify-between items-center pb-6" style="border-bottom: 2px dashed gray;">
+            <div class="p-2">
+                <h1 class="text-white text-3xl m-3 font-bold">E-Ticket</h1>
+                <p class="text-white">P-Ticket is a digital platform to make your <br>
+                    daily commuting better.</p>
+            </div>
+            <div class="p-2">
+                <h3 class="text-xl text-white m-3">Download our app</h3>
+                <div class="p-2 rounded-md bg-black border-white border-2 flex gap-3">
+                <img src="images/playstore.png" alt="">
+                    <div class="">
+                        <p>Get it on</p>
+                        <h1 class="text-2xl text-white">Coogle Play</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto flex justify-center md:justify-between items-center py-5">
+            <p>@all rights reserved, P-Ticket services limited.2024 </p>
+            <div class="flex flex-col md:flex-row gap-5">
+                <a href="" class="text-white">Terms & condition </a>
+                <a href="" class="text-white">Return & refund policy </a>
+                <a href="" class="text-white">Privacy policy </a>
+            </div>
+        </div>
+      </footer>
+    <script src="index.js"></script>
+</body>
+</html>
