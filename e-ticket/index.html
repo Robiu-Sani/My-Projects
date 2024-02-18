@@ -32,6 +32,9 @@
                 background-size: cover;
                 background-repeat: no-repeat;
             }
+            .seat:hover{
+                background: #16a34a3a;
+            }
             .bdrB{
                 border-bottom: 3px solid #16a34a;
             }
@@ -324,7 +327,7 @@
                     </div>
                     <div class="m-3 rounded-xl bg-gray-100 p-2">
                         <div class="flex justify-between items-center p-4" style="border-bottom: 1px dashed #4b4b4b63;">
-                            <small class=" text-black">Seat <sup id="setnumber" class="bg-[#16a34a] rounded-md text-white px-1"></sup></small>
+                            <small class=" text-black">Seat <sup id="setnumber" class="bg-[#16a34a] rounded-md text-white px-1">0</sup></small>
                             <small class="text-black">Class</small>
                             <small class="text-black">Price</small>
                         </div>
@@ -332,7 +335,7 @@
                         <hr/>
                         <div class="flex justify-between items-center p-2">
                             <small class="text-black font-bold">Total Price</small>
-                            <small class="text-black font-bold">BDT <span id="totalPriceadd" class="text-xl"></span></small>
+                            <small class="text-black font-bold">BDT <span id="totalPriceadd" class="text-xl">0</span></small>
                         </div>
                         <div id="copenInput" class="w-full bg-white my-4 hidden rounded-md relative p-1">
                             <input type="text" id="getCopne" placeholder="Have Any Coupon?" class="input w-full pr-10">
@@ -340,7 +343,7 @@
                         </div>
                         <div class="flex justify-between items-center p-2">
                             <small class="text-black font-bold">Grand Total</small>
-                            <small class="text-black font-bold">BTD <span id="GrandTotal" class="text-xl"></span></small>
+                            <small class="text-black font-bold">BTD <span id="GrandTotal" class="text-xl">0</span></small>
                         </div>
                     </div>
                     <form action="" class="my-2 px-2 p-1">
