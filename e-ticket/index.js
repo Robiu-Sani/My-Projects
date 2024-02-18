@@ -11,6 +11,8 @@ const submit = document.getElementById("submit");
 const Complite = document.getElementById("Complite");
 const closes = document.getElementById("close");
 const setnumber = document.getElementById("setnumber");
+
+
 const coupon1 = 'NEW15'
 const coupon2 = 'Couple 20';
 let totalAmount = 0;
@@ -27,29 +29,10 @@ submit.addEventListener('click', () => {
 
 closes.addEventListener('click', () => {
     Complite.classList.remove('active')
-    window.location.reload();
-})
-
-NumberBox.addEventListener('change', () => {
-    if (NumberBox !== '') {
-        submit.classList.add('active');
-        submit.classList.remove('hidden')
-    }else{
-        submit.classList.remove('active')
-    }
 })
 
 applyCopne.addEventListener('click' , () => {
-    if (getCopne.value == coupon1) {
-        GrandTotal.innerText = parseInt((totalPriceadd.textContent / 100) * 85)
-    }else if (getCopne.value == coupon2){
-        GrandTotal.innerText = parseInt((totalPriceadd.textContent / 100) * 80)
-    }else if(getCopne.value == "" || getCopne.value !== coupon1 || getCopne.value !== coupon2){
-        alert("Please check your coupon Your coupon is not match as muth as we have?")
-    }
-    else {
-        GrandTotal.innerText = totalAmount
-    }
+    OfferSystem();
 })
 
 
@@ -75,7 +58,47 @@ seats.forEach(element => {
             document.getElementById("fullBus").style.pointerEvents = "none";
             copenInput.classList.add('active');
         }
+
+        SubmitBtnWork();
+
+        // if (seatCount == 0) {
+        //     alert('You have to select any Available seat')
+        // } else {
+        //     SubmitBtnWork();
+        // }
     });
 }); 
 
 
+NumberBox.addEventListener('change', () => {
+    SubmitBtnWork();
+})
+
+function OfferSystem(){
+    if (getCopne.value == coupon1) {
+        GrandTotal.innerText = parseInt((totalPriceadd.textContent / 100) * 85);
+        copenInput.classList.remove('active');
+    }else if (getCopne.value == coupon2){
+        GrandTotal.innerText = parseInt((totalPriceadd.textContent / 100) * 80);
+        copenInput.classList.remove('active');
+    }else if(getCopne.value == "" || getCopne.value !== coupon1 || getCopne.value !== coupon2){
+        alert("Please check your coupon Your coupon is not match as muth as we have?")
+    }
+    else {
+        GrandTotal.innerText = totalAmount
+    }
+}
+
+
+function SubmitBtnWork(){
+    if (seatCount == 0) {
+        alert('You have to select any Available seat')
+    } else {
+        if (NumberBox.value !== "" && seatCount !== 0) {
+            submit.classList.add('active');
+            submit.classList.remove('hidden')
+        }else{
+            submit.classList.remove('active')
+        }
+    }
+}
