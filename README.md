@@ -6,4 +6,4 @@
 <p>Project 4 =>    <a href="https://ubiquitous-licorice-8e0a08.netlify.app">Legal Solution </a> </p>
 <p>Project 5 =>    <a href="https://lustrous-dragon-db6b5e.netlify.app"> Hockye's </a> </p>
 <p>Project 6 =>    <a href="https://animated-kleicha-d5550e.netlify.app"> JS Builders </a> </p>
-<p>Project 7 =>    <a href=" https://poetic-syrniki-e8b69d.netlify.app"> E-Ticket </a> </p>
+<p>Project 7 =>    <a href="https://poetic-syrniki-e8b69d.netlify.app"> E-Ticket </a> </p>
