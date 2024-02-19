@@ -16,6 +16,7 @@
                 /* font-family:  sans-serif; */
                 font-family: "Raleway", sans-serif;
                 transition: all .5s;
+                scroll-behavior: smooth;
             }
             .active{
                 display: block !important;
@@ -327,7 +328,7 @@
                     </div>
                     <div class="m-3 rounded-xl bg-gray-100 p-2">
                         <div class="flex justify-between items-center p-4" style="border-bottom: 1px dashed #4b4b4b63;">
-                            <small class=" text-black">Seat <sup id="setnumber" class="bg-[#16a34a] rounded-md text-white px-1">0</sup></small>
+                            <small class=" text-black">Seat <span id="setnumber" class="bg-[#16a34a] rounded text-white p-1">0</span></small>
                             <small class="text-black">Class</small>
                             <small class="text-black">Price</small>
                         </div>
@@ -356,9 +357,7 @@
                         <label for="name">Email Id
                             <input type="text" placeholder="Enter Email Id" class="input bg-gray-100 w-full my-4">
                         </label>
-                        <label for="name" id="submit" class="hidden">
-                            <input type="submit" value="Next" class="input w-full my-4 bg-[#16a34a]">
-                        </label>
+                        <input type="submit" id="submit" value="Next" class="input w-full my-4 bg-gray-400">
                     </form>
                     <div class="flex justify-between">
                         <a href="" class="underline">Terms and Conditions</a>
@@ -370,7 +369,7 @@
         </section>
     </main>
     <footer class=" p-10 bg-neutral text-neutral-content">
-        <div class="container mx-auto flex justify-center md:justify-between items-center pb-6" style="border-bottom: 2px dashed gray;">
+        <div class="container mx-auto flex flex-col md:flex-row justify-center md:justify-between items-center pb-6" style="border-bottom: 2px dashed gray;">
             <div class="p-2">
                 <h1 class="text-white text-3xl m-3 font-bold">E-Ticket</h1>
                 <p class="text-white">P-Ticket is a digital platform to make your <br>
