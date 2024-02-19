@@ -11,6 +11,8 @@ const submit = document.getElementById("submit");
 const Complite = document.getElementById("Complite");
 const closes = document.getElementById("close");
 const setnumber = document.getElementById("setnumber");
+const fullBus = document.getElementById("fullBus")
+const checkVawserSeat = document.getElementById("checkVawserSeat")
 
 
 const coupon1 = 'NEW15'
@@ -22,13 +24,15 @@ let totalSet = 40;
 
 
 setLeft.innerHTML= totalSet
+submit.style.cursor = "no-drop";
 
-submit.addEventListener('click', () => {
-    Complite.classList.add('active');
+NumberBox.addEventListener('input', () => {
+    SubmitBtnWork();
 })
 
 closes.addEventListener('click', () => {
     Complite.classList.remove('active')
+    window.location.reload()
 })
 
 applyCopne.addEventListener('click' , () => {
@@ -38,41 +42,44 @@ applyCopne.addEventListener('click' , () => {
 
 seats.forEach(element => {
     element.addEventListener('click', () => {
-        element.classList.add('bgActive')
-        element.style.pointerEvents = "none";
         seatCount++
-        totalSet = totalSet - 1
         totalAmount = seatCount * 550 
-        setLeft.innerHTML= totalSet
-        setnumber.innerText = seatCount
         const seatnumber = element.textContent
-        totalPriceadd.innerText = totalAmount
-        GrandTotal.innerText = totalAmount
         const addSeat = `<div class="flex justify-between items-center p-2">
-                                <small class="text-black">${seatnumber}</small>
+                                <small id="checkVawserSeat" class="text-black">${seatnumber}</small>
                                 <small class="text-black">Economoy</small>
                                 <small class="text-black">550</small>
                                 </div>`
-        selectedSeat.innerHTML += addSeat
-        if (seatCount >= 4) {
-            document.getElementById("fullBus").style.pointerEvents = "none";
-            copenInput.classList.add('active');
+        if (seatCount <= 4 ) {
+            if (element.classList.contains('bgActive')) {
+                alert('You already select this seat')
+                    seatCount--
+                } else {
+                    element.classList.add('bgActive')
+                    selectedSeat.innerHTML += addSeat
+                    totalPriceadd.innerText = totalAmount
+                    GrandTotal.innerText = totalAmount
+                    setnumber.innerText = seatCount
+                    totalSet = totalSet - 1
+                    setLeft.innerHTML= totalSet
+                }
+            } else {
+                alert('You already select 4 seat. In our services , you can select only 4 seat. ')
         }
-
+        (seatCount >= 4)? copenInput.classList.add('active') : ''
         SubmitBtnWork();
-
-        // if (seatCount == 0) {
-        //     alert('You have to select any Available seat')
-        // } else {
-        //     SubmitBtnWork();
-        // }
     });
 }); 
 
-
-NumberBox.addEventListener('change', () => {
-    SubmitBtnWork();
+submit.addEventListener('click', () => {
+    if (NumberBox.value !== "" && seatCount !== 0) {
+        Complite.classList.add('active');
+    }else{
+        alert('You must hove to fill the Your number box by your number')
+    }
+    
 })
+
 
 function OfferSystem(){
     if (getCopne.value == coupon1) {
@@ -93,12 +100,15 @@ function OfferSystem(){
 function SubmitBtnWork(){
     if (seatCount == 0) {
         alert('You have to select any Available seat')
+        NumberBox.value = ""
     } else {
         if (NumberBox.value !== "" && seatCount !== 0) {
-            submit.classList.add('active');
-            submit.classList.remove('hidden')
+            submit.style.background = '#16a34a';
+            submit.style.pointerEvents = "auto";
+            submit.style.cursor = "pointer";
         }else{
-            submit.classList.remove('active')
+            submit.style.background = 'gray';
+            submit.style.cursor = "no-drop";
         }
     }
 }
